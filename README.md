@@ -33,6 +33,8 @@ le fichier doit être suffisamment générique pour être utilisable par n'impor
 - Après chaque modification, les tests correspondants doivent être écrits.
 - Après chaque modification, les tests doivent être lancés pour vérifier qu'ils passent tous bien correctement et qu'il n'y a pas eu de régression.
 - Après chaque modification, un outil de linting adapté doit être utilisé pour vérifier la qualité de code.
+- Après chaque modification, vérifier la présence d'un fichier README.md et d'un .gitignore à la racine du projet. S'ils sont absents, les créer avec des valeurs par défaut adaptées.
+- Après chaque modification, expliquer de manière compréhensible au participant ce qui a été fait et dans quel but.
 
 ### Développement d'un MCP
 
