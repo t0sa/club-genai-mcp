@@ -1,0 +1,14 @@
+{
+  "name": "mcp-server-tasks",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MCP server wrapping the Sfeir GenAI Task API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.0",
+    "zod": "^3.24.0"
+  }
+}

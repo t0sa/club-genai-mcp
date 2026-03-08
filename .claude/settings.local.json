@@ -1,0 +1,10 @@
+{
+  "enabledMcpjsonServers": [
+    "sfeir-tasks"
+  ],
+  "permissions": {
+    "allow": [
+      "mcp__sfeir-tasks__get_all_tasks"
+    ]
+  }
+}
