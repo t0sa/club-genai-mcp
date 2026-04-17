@@ -1,13 +1,13 @@
 const slides = [
-    'generated/slides/intro.html',
-    'generated/slides/hebergeur.html',
-    'generated/slides/menu.html',
-    'generated/slides/part1-architecture.html',
-    'generated/slides/part2-server.html',
-    'generated/slides/part3-client.html',
-    'generated/slides/part4-implementation.html',
-    'generated/slides/part5-security.html',
-    'generated/slides/conclusion.html'
+    'intro.html',
+    'slides/hebergeur.html',
+    'slides/menu.html',
+    'slides/part1-architecture.html',
+    'slides/part2-server.html',
+    'slides/part3-client.html',
+    'slides/part4-implementation.html',
+    'slides/part5-security.html',
+    'slides/conclusion.html'
 ];
 
 async function loadSlidesAndInit() {
