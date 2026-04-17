@@ -1,5 +1,5 @@
 const slides = [
-    'intro.html',
+    'slides/intro.html',
     'slides/hebergeur.html',
     'slides/menu.html',
     'slides/part1-architecture.html',
