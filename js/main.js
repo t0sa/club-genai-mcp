@@ -30,7 +30,7 @@ async function loadSlidesAndInit() {
             width: 1050,
             height: 700,
             minScale: 0.2,
-            maxScale: 2.0
+            maxScale: 1.0
         });
     } catch (err) {
         console.error('Error loading slides:', err);
