@@ -2,11 +2,11 @@ const slides = [
     'slides/intro.html',
     'slides/hebergeur.html',
     'slides/menu.html',
-    'slides/part1-architecture.html',
-    'slides/part2-server.html',
-    'slides/part3-client.html',
-    'slides/part4-implementation.html',
-    'slides/part5-security.html',
+    'slides/part1-introduction.html',
+    'slides/part2-client.html',
+    'slides/part3-serveur.html',
+    'slides/part4-conclusion.html',
+    'slides/part5-bonus.html',
     'slides/conclusion.html'
 ];
 

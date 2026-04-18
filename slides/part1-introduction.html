@@ -1,0 +1,54 @@
+<section>
+    <section class="center" style="text-align: center;">
+        <h1 style="font-size: 3em;">🔌<br>Partie 1 : Introduction au MCP</h1>
+        <p class="text-muted" style="font-weight: 600; letter-spacing: 2px;">15 MINUTES</p>
+    </section>
+
+    <section>
+        <h2>Qu'est-ce que le MCP ?</h2>
+        <div class="card" style="margin-bottom: 20px;">
+            <p style="font-size: 0.75em; color: var(--color-stone);">
+                L'<strong style="color: var(--color-charcoal);">Analogie Parfaite</strong> : MCP est à l'IA ce que le port USB-C est à l'électronique. Un standard universel pour connecter les IA à des outils externes.
+            </p>
+        </div>
+        <div class="grid-2" style="align-items: stretch;">
+            <div class="card flex-col">
+                <strong style="color: var(--color-charcoal);">Les Acteurs</strong>
+                <ul style="font-size: 0.72em; color: var(--color-stone); padding: 0; list-style: none;" class="flex-col">
+                    <li>🖥️ <strong style="color: var(--color-terracotta);">Host</strong> : App globale (Claude Desktop, VS Code)</li>
+                    <li>🔗 <strong style="color: var(--color-terracotta);">Client</strong> : Composant de connexion</li>
+                    <li>⚙️ <strong style="color: var(--color-terracotta);">Server</strong> : App exposant les outils</li>
+                </ul>
+            </div>
+            <div class="card flex-col">
+                <strong style="color: var(--color-charcoal);">Les Couches</strong>
+                <ul style="font-size: 0.72em; color: var(--color-stone); padding: 0; list-style: none;" class="flex-col">
+                    <li>🗂️ <strong style="color: #7c9ab8;">Data Layer</strong> : JSON-RPC 2.0 (cycle de vie)</li>
+                    <li>📡 <strong style="color: #7c9ab8;">Transport Layer</strong> : Stdio (local) ou HTTP/SSE (distant)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Architecture : Host - Client - Serveur</h2>
+        <div class="card" style="text-align: center;">
+            <div class="flex-col" style="align-items: center; gap: 15px;">
+                <span class="tag" style="background: var(--color-sand); color: var(--color-charcoal); font-size: 0.8em; padding: 10px;">MCP Host (Application IA)</span>
+                <span style="color: var(--color-stone); font-size: 0.8em;">↓ <em>Gère des Clients</em> ↓</span>
+                <div style="display: flex; gap: 40px; justify-content: center; width: 100%;">
+                    <div class="flex-col" style="align-items: center; flex: 1;">
+                        <span class="tag" style="background: var(--color-sand); color: var(--color-charcoal); font-size: 0.7em;">Client 1</span>
+                        <span style="color: var(--color-stone); font-size: 0.6em;">↕️ Stdio</span>
+                        <span class="tag" style="background: transparent; color: var(--color-terracotta); border: 1.5px solid var(--color-terracotta); font-size: 0.7em;">Serveur Local</span>
+                    </div>
+                    <div class="flex-col" style="align-items: center; flex: 1;">
+                        <span class="tag" style="background: var(--color-sand); color: var(--color-charcoal); font-size: 0.7em;">Client 2</span>
+                        <span style="color: var(--color-stone); font-size: 0.6em;">↕️ HTTP/SSE</span>
+                        <span class="tag" style="background: transparent; color: var(--color-terracotta); border: 1.5px solid var(--color-terracotta); font-size: 0.7em;">Serveur Distant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
