@@ -117,6 +117,15 @@ body, .reveal {
     border: none;
 }
 
+.card p, .card li {
+    color: var(--color-charcoal);
+    font-size: 0.85em;
+}
+
+.card strong {
+    font-weight: 700;
+}
+
 .tag {
     display: inline-block;
     color: var(--color-cream);
@@ -140,6 +149,13 @@ code {
     border-radius: 6px;
     font-size: 0.85em;
     font-weight: 600;
+}
+
+pre {
+    font-family: var(--r-code-font);
+    white-space: pre;
+    word-wrap: normal;
+    overflow-x: auto;
 }
 
 .step-list {

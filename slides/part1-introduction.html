@@ -6,25 +6,25 @@
 
     <section>
         <h2>Qu'est-ce que le MCP ?</h2>
-        <div class="card" style="margin-bottom: 20px;">
-            <p style="font-size: 0.75em; color: var(--color-stone);">
-                L'<strong style="color: var(--color-charcoal);">Analogie Parfaite</strong> : MCP est à l'IA ce que le port USB-C est à l'électronique. Un standard universel pour connecter les IA à des outils externes.
-            </p>
+        <!-- Composant F : accroche terracotta -->
+        <div class="card" style="margin-bottom: 20px; border-left: 4px solid var(--color-terracotta);">
+            <p>L'<strong style="color: var(--color-terracotta);">Analogie Parfaite</strong> : MCP est à l'IA ce que le port USB-C est à l'électronique. Un standard universel pour connecter les IA à des outils externes.</p>
         </div>
-        <div class="grid-2" style="align-items: stretch;">
-            <div class="card flex-col">
-                <strong style="color: var(--color-charcoal);">Les Acteurs</strong>
-                <ul style="font-size: 0.72em; color: var(--color-stone); padding: 0; list-style: none;" class="flex-col">
+        <!-- Composant E : 2 concepts côte à côte -->
+        <div class="grid-2" style="align-items: start;">
+            <div class="card" style="border-left: 4px solid #7c9ab8;">
+                <strong style="color: #7c9ab8;">Les Acteurs</strong>
+                <ul style="padding: 0; list-style: none; margin-top: 8px;" class="flex-col">
                     <li>🖥️ <strong style="color: var(--color-terracotta);">Host</strong> : App globale (Claude Desktop, VS Code)</li>
                     <li>🔗 <strong style="color: var(--color-terracotta);">Client</strong> : Composant de connexion</li>
                     <li>⚙️ <strong style="color: var(--color-terracotta);">Server</strong> : App exposant les outils</li>
                 </ul>
             </div>
-            <div class="card flex-col">
-                <strong style="color: var(--color-charcoal);">Les Couches</strong>
-                <ul style="font-size: 0.72em; color: var(--color-stone); padding: 0; list-style: none;" class="flex-col">
-                    <li>🗂️ <strong style="color: #7c9ab8;">Data Layer</strong> : JSON-RPC 2.0 (cycle de vie)</li>
-                    <li>📡 <strong style="color: #7c9ab8;">Transport Layer</strong> : Stdio (local) ou HTTP/SSE (distant)</li>
+            <div class="card" style="border-left: 4px solid #8aad8a;">
+                <strong style="color: #8aad8a;">Les Couches</strong>
+                <ul style="padding: 0; list-style: none; margin-top: 8px;" class="flex-col">
+                    <li>🗂️ <strong style="color: var(--color-terracotta);">Data Layer</strong> : JSON-RPC 2.0 (cycle de vie)</li>
+                    <li>📡 <strong style="color: var(--color-terracotta);">Transport Layer</strong> : Stdio (local) ou HTTP/SSE (distant)</li>
                 </ul>
             </div>
         </div>
@@ -32,23 +32,48 @@
 
     <section>
         <h2>Architecture : Host - Client - Serveur</h2>
-        <div class="card" style="text-align: center;">
-            <div class="flex-col" style="align-items: center; gap: 15px;">
-                <span class="tag" style="background: var(--color-sand); color: var(--color-charcoal); font-size: 0.8em; padding: 10px;">MCP Host (Application IA)</span>
-                <span style="color: var(--color-stone); font-size: 0.8em;">↓ <em>Gère des Clients</em> ↓</span>
-                <div style="display: flex; gap: 40px; justify-content: center; width: 100%;">
-                    <div class="flex-col" style="align-items: center; flex: 1;">
-                        <span class="tag" style="background: var(--color-sand); color: var(--color-charcoal); font-size: 0.7em;">Client 1</span>
-                        <span style="color: var(--color-stone); font-size: 0.6em;">↕️ Stdio</span>
-                        <span class="tag" style="background: transparent; color: var(--color-terracotta); border: 1.5px solid var(--color-terracotta); font-size: 0.7em;">Serveur Local</span>
-                    </div>
-                    <div class="flex-col" style="align-items: center; flex: 1;">
-                        <span class="tag" style="background: var(--color-sand); color: var(--color-charcoal); font-size: 0.7em;">Client 2</span>
-                        <span style="color: var(--color-stone); font-size: 0.6em;">↕️ HTTP/SSE</span>
-                        <span class="tag" style="background: transparent; color: var(--color-terracotta); border: 1.5px solid var(--color-terracotta); font-size: 0.7em;">Serveur Distant</span>
-                    </div>
-                </div>
+        <!-- Note contextuelle -->
+        <div class="card" style="border-left: 4px solid #f0ad4e; margin-bottom: 20px; display: flex; align-items: center; gap: 15px;">
+            <span style="font-size: 1.8em;">💡</span>
+            <p>Dans un <strong style="color: var(--color-terracotta);">IDE</strong> (VS Code, Cursor) ou un <strong style="color: var(--color-terracotta);">terminal</strong> (Claude Code), le <strong style="color: var(--color-terracotta);">Host</strong> et le <strong style="color: var(--color-terracotta);">Client</strong> sont intégrés dans le même processus — c'est l'application elle-même qui gère la connexion.</p>
+        </div>
+        <!-- Composant D étendu : schéma 3 colonnes avec rôles et flèches -->
+        <div style="display: flex; align-items: stretch; gap: 0;">
+
+            <!-- Colonne Host -->
+            <div class="card flex-col" style="flex: 1; border-top: 4px solid var(--color-terracotta); text-align: center; justify-content: center;">
+                <span style="font-size: 2em;">🖥️</span>
+                <p style="font-weight: 700; color: var(--color-terracotta); margin-top: 8px;">Host</p>
+                <span class="tag" style="background: transparent; color: var(--color-terracotta); border: 1.5px solid var(--color-terracotta);">Application IA</span>
+                <p class="text-muted" style="margin-top: 10px;">Claude Desktop<br>VS Code</p>
             </div>
+
+            <!-- Flèche Host → Client -->
+            <div style="display: flex; align-items: center; padding: 0 8px; color: var(--color-charcoal); font-size: 1.4em; font-weight: 300;">⟷</div>
+
+            <!-- Colonne Client -->
+            <div class="card flex-col" style="flex: 1; border-top: 4px solid #7c9ab8; text-align: center; justify-content: center;">
+                <span style="font-size: 2em;">🔗</span>
+                <p style="font-weight: 700; color: #7c9ab8; margin-top: 8px;">Client</p>
+                <span class="tag" style="background: transparent; color: #7c9ab8; border: 1.5px solid #7c9ab8;">Connecteur</span>
+                <p class="text-muted" style="margin-top: 10px;">Gère le cycle<br>de vie MCP</p>
+            </div>
+
+            <!-- Flèche Client → Serveur avec protocoles -->
+            <div class="flex-col" style="align-items: center; justify-content: center; padding: 0 8px; gap: 8px;">
+                <span style="font-size: 0.65em; background: var(--color-sand); color: var(--color-charcoal); padding: 3px 8px; border-radius: 6px;">Stdio</span>
+                <span style="color: var(--color-charcoal); font-size: 1.4em; font-weight: 300;">⟷</span>
+                <span style="font-size: 0.65em; background: var(--color-sand); color: var(--color-charcoal); padding: 3px 8px; border-radius: 6px;">HTTP/SSE</span>
+            </div>
+
+            <!-- Colonne Serveur -->
+            <div class="card flex-col" style="flex: 1; border-top: 4px solid #8aad8a; text-align: center; justify-content: center;">
+                <span style="font-size: 2em;">⚙️</span>
+                <p style="font-weight: 700; color: #8aad8a; margin-top: 8px;">Serveur</p>
+                <span class="tag" style="background: transparent; color: #8aad8a; border: 1.5px solid #8aad8a;">Outils & Données</span>
+                <p class="text-muted" style="margin-top: 10px;">Local ou<br>Distant</p>
+            </div>
+
         </div>
     </section>
 </section>

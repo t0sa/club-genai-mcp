@@ -6,26 +6,29 @@
 
     <section>
         <h2>Cycle de vie & Primitives</h2>
+        <!-- Composant E : 2 colonnes -->
         <div class="grid-2" style="align-items: start;">
-            <div class="card">
-                <strong style="color: var(--color-charcoal);">Négociation & Sécurité</strong>
-                <p style="font-size: 0.75em; color: var(--color-stone); margin-top: 8px;">
+            <!-- Colonne gauche : card principale -->
+            <div class="card" style="border-left: 4px solid #d9534f;">
+                <strong style="color: #d9534f;">Négociation & Sécurité</strong>
+                <p style="margin-top: 8px;">
                     <strong style="color: var(--color-terracotta);">initialize</strong> : Échange des capacités.<br><br>
-                    <strong style="color: #d9534f;">Human-in-the-loop</strong> : Le client garantit la sécurité avec l'approbation de l'utilisateur.
+                    <strong style="color: var(--color-terracotta);">Human-in-the-loop</strong> : Le client garantit la sécurité avec l'approbation de l'utilisateur.
                 </p>
             </div>
+            <!-- Colonne droite : composant B listing vertical -->
             <div class="flex-col" style="gap: 10px;">
-                <div class="card" style="padding: 15px; border-left: 4px solid #7c9ab8;">
-                    <strong style="color: var(--color-charcoal);">Elicitation</strong>
-                    <p style="font-size: 0.68em; color: var(--color-stone); margin-top: 5px;">Suspend une action pour demander des infos structurées à l'utilisateur.</p>
+                <div class="card" style="border-left: 4px solid #7c9ab8;">
+                    <strong style="color: #7c9ab8;">Elicitation</strong>
+                    <p style="margin-top: 5px;">Suspend une action pour demander des infos structurées à l'utilisateur.</p>
                 </div>
-                <div class="card" style="padding: 15px; border-left: 4px solid #8aad8a;">
-                    <strong style="color: var(--color-charcoal);">Roots</strong>
-                    <p style="font-size: 0.68em; color: var(--color-stone); margin-top: 5px;">Limites du système de fichiers autorisées pour le serveur.</p>
+                <div class="card" style="border-left: 4px solid #8aad8a;">
+                    <strong style="color: #8aad8a;">Roots</strong>
+                    <p style="margin-top: 5px;">Limites du système de fichiers autorisées pour le serveur.</p>
                 </div>
-                <div class="card" style="padding: 15px; border-left: 4px solid #f0ad4e;">
-                    <strong style="color: var(--color-charcoal);">Sampling</strong>
-                    <p style="font-size: 0.68em; color: var(--color-stone); margin-top: 5px;">Demander des complétions autonomes à l'IA du client.</p>
+                <div class="card" style="border-left: 4px solid #f0ad4e;">
+                    <strong style="color: #f0ad4e;">Sampling</strong>
+                    <p style="margin-top: 5px;">Demander des complétions autonomes à l'IA du client.</p>
                 </div>
             </div>
         </div>
@@ -33,16 +36,17 @@
 
     <section>
         <h2>Pratique : MCP GitHub</h2>
+        <!-- Composant B : listing vertical -->
         <div class="flex-col" style="gap: 15px;">
             <div class="card" style="border-left: 4px solid #7c9ab8;">
-                <strong style="color: var(--color-charcoal);">Configuration & Auth</strong>
-                <p style="font-size: 0.72em; color: var(--color-stone); margin-top: 5px;">
-                    Ajouter le serveur <strong style="color: #7c9ab8;">mcp-github</strong> et un Token d'Accès.
+                <strong style="color: #7c9ab8;">Configuration & Auth</strong>
+                <p style="margin-top: 5px;">
+                    Ajouter le serveur <strong style="color: var(--color-terracotta);">mcp-github</strong> et un Token d'Accès.
                 </p>
             </div>
             <div class="card" style="border-left: 4px solid var(--color-terracotta);">
-                <strong style="color: var(--color-charcoal);">Exploitation</strong>
-                <p style="font-size: 0.72em; color: var(--color-stone); margin-top: 5px;">
+                <strong style="color: var(--color-terracotta);">Exploitation</strong>
+                <p style="margin-top: 5px;">
                     Prompt : <em>"Récupère le fichier agent.md dans /agent sur le repo t0sa/club-genai-mcp"</em><br><br>
                     <span class="text-muted">Observation du Human-in-the-loop avant l'appel d'outil.</span>
                 </p>
