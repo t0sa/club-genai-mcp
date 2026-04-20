@@ -41,15 +41,65 @@
             <div class="card" style="border-left: 4px solid #7c9ab8;">
                 <strong style="color: #7c9ab8;">Configuration & Auth</strong>
                 <p style="margin-top: 5px;">
-                    Ajouter le serveur <strong style="color: var(--color-terracotta);">mcp-github</strong> et un Token d'Accès.
+                    Ajouter le serveur <strong style="color: var(--color-terracotta);">mcp-github</strong> et générer un token d'accès depuis Github.
                 </p>
+            </div>
+                    <div class="flex-col" style="gap: 15px;">
+            <div class="card" style="border-left: 4px solid #f0ad4e;">
+                <strong style="color: #f0ad4e;">Configuration à ajouter dans <code style="font-size: 0.8em; color: var(--color-charcoal);">mcp.json</code></strong>
+                <pre style="background: var(--color-charcoal); color: var(--color-cream); font-size: 0.72em; padding: 16px; border-radius: 8px; line-height: 1.8; margin-top: 12px; overflow-x: auto;">
+    {
+        "mcpServers": {
+            "github": {
+            "url": "https://api.githubcopilot.com/mcp/",
+            "headers": {
+                "Authorization": "Bearer votre_token"
+            }
+            }
+        }
+    }</pre>
             </div>
             <div class="card" style="border-left: 4px solid var(--color-terracotta);">
                 <strong style="color: var(--color-terracotta);">Exploitation</strong>
                 <p style="margin-top: 5px;">
-                    Prompt : <em>"Récupère le fichier agent.md dans /agent sur le repo t0sa/club-genai-mcp"</em><br><br>
+                    Prompt : <em>"Récupère le fichier agent.md dans /agent sur le repo club-genai/club-genai-mcp"</em><br><br>
                     <span class="text-muted">Observation du Human-in-the-loop avant l'appel d'outil.</span>
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>TP : App front-end — Installation des MCP</h2>
+        <div class="flex-col" style="gap: 12px;">
+            <!-- Contexte -->
+            <div class="card" style="border-left: 4px solid var(--color-terracotta); display: flex; gap: 16px; align-items: flex-start; padding: 20px 24px;">
+                <span style="font-size: 1.6em; min-width: 30px; margin-top: 2px;">🎯</span>
+                <div>
+                    <p style="font-size: 0.78em; color: var(--color-charcoal); line-height: 1.6;">Construire une interface avec <strong style="color: var(--color-terracotta);">Nuxt MCP</strong> + <strong style="color: var(--color-terracotta);">Playwright MCP</strong> consommant l'API Task Tracker via <strong>http://localhost:8080/openapi</strong></p>
+                    <p style="font-size: 0.75em; color: var(--color-charcoal); margin-top: 10px;">Endpoints : <strong style="color: #8aad8a;">get_all_tasks</strong> &nbsp;·&nbsp; <strong style="color: #7c9ab8;">get_latest_task</strong> &nbsp;·&nbsp; <strong style="color: var(--color-terracotta);">create_task</strong></p>
+                </div>
+            </div>
+            <!-- Installation -->
+            <div class="grid-2" style="align-items: start; gap: 14px;">
+                <div class="card" style="border-left: 4px solid #7c9ab8;">
+                    <strong style="color: #7c9ab8; font-size: 0.75em;">Dans Claude Code</strong>
+                    <pre style="font-size: 0.68em; background: var(--color-charcoal); color: var(--color-cream); padding: 12px; border-radius: 8px; margin-top: 10px; line-height: 1.8;">claude mcp add nuxt npx --yes @nuxt/mcp
+claude mcp add playwright npx --yes @playwright/mcp-server</pre>
+                </div>
+                <div class="card" style="border-left: 4px solid #8aad8a;">
+                    <strong style="color: #8aad8a; font-size: 0.75em;">Dans VS Code (GitHub Copilot)</strong>
+                    <div class="flex-col" style="gap: 8px; margin-top: 10px;">
+                        <div>
+                            <strong style="color: var(--color-terracotta); font-size: 0.68em;">nuxt</strong>
+                            <pre style="font-size: 0.68em; background: var(--color-charcoal); color: var(--color-cream); padding: 8px 12px; border-radius: 6px; margin-top: 4px;">npx --yes @nuxt/mcp</pre>
+                        </div>
+                        <div>
+                            <strong style="color: var(--color-terracotta); font-size: 0.68em;">playwright</strong>
+                            <pre style="font-size: 0.68em; background: var(--color-charcoal); color: var(--color-cream); padding: 8px 12px; border-radius: 6px; margin-top: 4px;">npx --yes @playwright/mcp-server</pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

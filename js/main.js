@@ -5,8 +5,7 @@ const slides = [
     'slides/part1-introduction.html',
     'slides/part2-client.html',
     'slides/part3-serveur.html',
-    'slides/part4-conclusion.html',
-    'slides/part5-bonus.html'
+    'slides/part4-conclusion.html'
 ];
 
 async function loadSlidesAndInit() {
