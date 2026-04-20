@@ -4,6 +4,7 @@ Ceci est un repository contenant toutes les informations nécessaires au déroul
 L'objectif est de réaliser une présentation et des exercices pratiques sur l'écriture et le fonctionnement des MCP au cours d'une soirée d'un format d'une heure et demie environ.
 
 Ce repository contient les exercices et livrables ainsi qu'une version solution des réalisations telles qu'elles doivent être effectuées par les personnes présentes lors de la session.
+
 Support de la présentation : [slides](https://club-genai.github.io/club-genai-mcp/)
 
 ## Déroulé de la session
